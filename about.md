@@ -17,4 +17,4 @@ I am very competent in python and its related technologies viz
 * Facial recognition web application with [reverse image search](https://whatis.techtarget.com/definition/reverse-image-search) running on flask web framework, & face_recognition.py
 * Facebook and Telegram dating bots found [here](http://t.me/datingappbot)
 * and other web applications
-* i have contributed to other python projects on github ie [bocadillo](https://github.com/bocadilloproject/bocadillo)
+* i have contributed to other python projects on github ie [bloguero](https://github.com/bocadilloproject/bloguero/graphs/contributors
