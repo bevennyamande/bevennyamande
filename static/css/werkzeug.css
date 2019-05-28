@@ -1,0 +1,22 @@
+        .jumbotron {
+            background: url(../img/busy.png) no-repeat;
+
+        }
+
+        .content {
+            background: black;
+            color: white;
+        }
+
+        .nav>li>a {
+            color: black;
+            text-transform: uppercase;
+        }
+
+
+        .media-body>ul>li {
+            list-style-image: url(../img/bullets.png);
+        }
+        .bg-dark{
+            background: url(../img/busy.png) center; !important;
+        }
