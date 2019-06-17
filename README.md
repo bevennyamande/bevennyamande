@@ -1,2 +1,4 @@
-# http://bevennyamande.github.io
+# Homepage for Beven Nyamande
+
+## Showcase products and skills
 
