@@ -9,4 +9,4 @@
  - Bcom Hon Finance 
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/0xbeven)
-![Tryhackme profile](https://tryhackme-badges.s3.amazonaws.com/werkzeug.png)
+<img src="https://tryhackme-badges.s3.amazonaws.com/werkzeug.png" alt="TryHackMe">
