@@ -6,5 +6,5 @@
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/0xbeven)
 
-<img align='right' src="https://github-readme-stats.vercel.app/api?username=bevennyamande&show_icons=true&theme=radical" width="380">
+<img align='center' src="https://github-readme-stats.vercel.app/api?username=bevennyamande&show_icons=true&theme=radical" width="380">
 
