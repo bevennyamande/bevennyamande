@@ -1,6 +1,6 @@
 <h2> Hi, I'm Beven Nyamande </h2>
 
-- I play CTFs @ [Tryhackme](https://tryhackme.com/p/werkzeug) and i am ranked 2nd in Zimbabwe, security enthusiast
+- I play CTFs @ [Tryhackme](https://tryhackme.com/p/werkzeug) and i am a Zimbabwean Security enthusiast
 - I love python, flask. I am open to collaborating with like minds.
 - I didnt study Computer Science , but Bcom Hons Finance 
 
