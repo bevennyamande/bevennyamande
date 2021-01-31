@@ -1,12 +1,19 @@
-### Whoami
+### $ whoami
 
-- I’m currently learning penetration testing at [Tryhackme](https://tryhackme.com/p/werkzeug)
-- I look to collaborate on any project regarding python and web development in flask/ django
+- Security Enthusiast, CTFer @ [Tryhackme](https://tryhackme.com/p/werkzeug)
+- Bcom in Finance not Comps :)
+- Deep love for Python and Flask
 
-- ⚡ Fun fact: ...
+#### ⚡ funfact ...
 
- - Wannabe Security Professional
- - Bcom Hon Finance 
+- Mostly self taught ( "Stay Hungry and Curious" )
+
+#### Roadmap to Self-Mastery and Skills Upgrade
+
+- Learn Reverse Engineering fro CTFs etc ( Radare2 Mastery )
+- Learn css and js ( Frontend Mastery )
+- Learn PHP ( Backend Mastery ) for i know python, :)
+- Learn game development in python ( ursina )
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/0xbeven)
 
