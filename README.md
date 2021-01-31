@@ -1,7 +1,7 @@
 ### $ whoami
 
 - Security Enthusiast, CTFer @ [Tryhackme](https://tryhackme.com/p/werkzeug)
-- Bcom in Finance not Comps :)
+- Bcom in Finance :)
 - Deep love for Python and Flask
 
 #### ⚡ funfact ...
