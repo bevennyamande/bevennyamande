@@ -3,16 +3,21 @@ layout: post
 title: Introduction
 ---
 
-### Whoami
+|
 
-Hie, I am Beven Nyamande, but on most platform i am *0xbeven*.I am interested in many aspects of Cyber Security
-and web development.Basically i am described by the following
+## Whoami
 
-*Security Rersearcher and Enthusiast*, *Gamer & CTFer*, *Open Sourcer*
+Hie, I am Beven Nyamande, but on most platform i am *0xbeven*.
 
-### Skill-set
+*Security Rresearcher*,*Gamer & CTFer*,*Open Sourcer*
 
-I am a full stack web developer 
+[TryHackMe](https://tryhackme.com/p/werkzeug)
+
+## Skill-set
+
+I am a full stack web developer
+
+#### languages
 
 - *Python ( 9/10 )*
 - *PHP ( 5/10 )*
@@ -27,12 +32,17 @@ I am a full stack web developer
 - Bootstrap (Css Framework )
 
 
-### Projects
+## Projects
 
 For my projects and contributions check on [GitHub](https://github.com/bevennyamande).
 
 -----------
 
+## CTF Badges
+
+<script src="https://tryhackme.com/badge/19896"></script>
+-------------
+
 Thanks for reading!
 
-This site was last updated {{ site.time | date: "%B %d, %Y" }}.
+<p style="font-size:15px" >last updated {{ site.time | date: "%B %d, %Y" }}.</p>
