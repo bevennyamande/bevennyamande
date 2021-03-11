@@ -49,3 +49,12 @@ Check this [article](https://en.wikipedia.org/wiki/Domain_Name_System)
 
 # Task 7 : Exfiltration Practice
 - login with SSH provided 
+
+# Task 10 : Infiltration Practice
+- this is what the script is doing
+- decode from base 58 and decode the output from base64
+
+```bash
+
+echo "XYZSTRINGRECEIVED==" |base58 -d |base64 -d
+```
