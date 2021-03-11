@@ -47,4 +47,5 @@ host IP_ADDRESS
 ### What is the maximum length of a DNS name?
 Check this [article](https://en.wikipedia.org/wiki/Domain_Name_System)
 
-
+# Task 7 : Exfiltration Practice
+- login with SSH provided 
