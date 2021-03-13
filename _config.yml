@@ -1,18 +1,18 @@
-site: Asko
-url: #yoururl
-title: Asko
-description: Simple and minimalistic jekyll blogging theme.
+site: Personal website for Beven Nyamande
+url: beven.co.zw
+title: 0xbeven - Blog Site
+description: My blog where i post cybersecurity related activities and programming activites
 googlewebfonts: Fira+Code:wght@400;500;700
 twitter:
-  username: #yourusername
+  username: 0xbeven
   card: summary
   creator: #yourusername
 author:
-  twitter: #yourusername
-  name: #yourusername
+  twitter: 0xbeven
+  name: Beven Nyamande
   avatar:
-  email: #youremail
-  url: #yoururl
+  email: wasp00007@gmail.com
+  url: beven.co.zw
 permalink: pretty
 
 baseurl: ""
