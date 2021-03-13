@@ -1,45 +1,63 @@
-# Setup
-title: 0xbeven
-url: https://beven.co.zw
-paginate: 1
-baseurl: ""
+site: Asko
+url: #yoururl
+title: Asko
+description: Simple and minimalistic jekyll blogging theme.
+googlewebfonts: Fira+Code:wght@400;500;700
+twitter:
+  username: #yourusername
+  card: summary
+  creator: #yourusername
+author:
+  twitter: #yourusername
+  name: #yourusername
+  avatar:
+  email: #youremail
+  url: #yoururl
 permalink: pretty
 
-# Gems
-plugins:
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-seo-tag
+baseurl: ""
 
-# Optimize Jekyll
+highlighter: rouge
+
 exclude:
-  - .editorconfig
-  - .git
   - .jekyll-cache
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.md
-  - README.md
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
 
 sass:
-  sass_dir: _sass
-  style: :compressed
+  sass_dir:          _sass
+  style:            :compressed
 
-# Options
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Replace this value and uncomment to enable Google Analytics tracking
-# ga_analytics: UA-000000-0
-
-# Specify the author for blog posts
-author:
-  name: 0xbeven
-  url: https://twitter.com/0xbeven
-  email: bevenfx@gmail.com
-
-# Custom vars
-version: 3.0.0
-
-# Navbar page list
-nav:
-  - title: Blog
-    url: /archive
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
