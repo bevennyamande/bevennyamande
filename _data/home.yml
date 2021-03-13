@@ -1,0 +1,36 @@
+navbar_entries:
+  - title: about
+    url: about
+
+  - title: blog
+    url: blog
+
+
+project_entries:
+  - title: Reverse Image Search & Facial Recognition
+    url: minglr.herokuapp.com
+    desc: Reverse Image search and facial recognition webapp, and behind the scene ML model
+
+  - title: Stock Exchange Scrapper
+    url:  check github
+    desc: Python scripts that collects daily stock prices about [ZSE](https://www.zse.co.zw)
+
+  - title: Breast Cancer detection system
+    url: github.com/bevennyamande
+    desc: Simple breast cancer detection system that utilizes ML models to classify images
+
+
+# old_project_entries:
+
+footer_entries:
+
+  - title: twitter
+    url: twitter.com/0xbeven
+
+  - title: github
+    url: github.com/bevennyamande
+
+  - title: feed
+    url: feed.xml
+
+# misc_entrie#  - title: this is an example vertical li# url: false
