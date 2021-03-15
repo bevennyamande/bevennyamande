@@ -1,3 +1,8 @@
+---
+layout: post
+title: Useful Tricks and Tips
+---
+
 # Hashcat
 
 - hashcat -m 1800 -a 0 hash.txt rockyou.txt
