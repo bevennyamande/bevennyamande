@@ -4,13 +4,54 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-15T23:59:06+02:00</updated>
+ <updated>2021-03-16T23:06:11+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
    <email>wasp00007@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Pentesting Crash Course - TryHackMe Room</title>
+   <link href="https://beven.co.zw/2021/03/16/thm-pentesting-crash-course-challenge"/>
+   <updated>2021-03-16T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/03/16/THM-Pentesting-Crash-Course-Challenge</id>
+   <content type="html">&lt;p&gt;Room: &lt;a href=&quot;https://tryhackme.com/room/ccpentesting&quot;&gt;Pentesting Crash Course&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;enumeration&quot;&gt;Enumeration&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ubuntu Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; protocol 2.0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| ssh-hostkey:
+|   2048 12:96:a6:1e:81:73:ae:17:4c:e1:7c:63:78:3c:71:1c &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;RSA&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfc3f0BTiHCcXfM5HblbdICzdy1guzmd9N9m12TmOIFFFHdeHQbWjCnA38bbRtlJbvKUXcvQBqtV7UCeHLbcLGq27LeoxnNW6XeVlmXLqwu/hqJqVyi9PDp1U21NwtJz/MaF0nXhirp1MKcj94QZjRHMuvrywpw0jlJAD34OUufv6HT5a5eakO/QrSNTLgACV0AIn3Pb5/iC6bSOctj7+e5ndq5IcHuHaVtpjVV9gCF62xxTCN6hdQKF8KjWfWUEkEDRhgjKyENsLO1/XUNH0iTHsvOH8N3JN9z43067NBlX3sddciBl2HNwxlQEe8O8UC63yHvmx4M7agoyDYPwTF
+|   256 6d:9c:f2:07:11:d2:aa:19:99:90:bb:ec:6b:a1:53:77 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ECDSA&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH3QGzm8W9HuRYyoZkwHKkcVgJDlqnCU0s6Rt5fPp/Z34BYj4845B5la/2abdCyJ4zPUuOyS2OMAyJAFUm31kG0&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+|   256 0e:a5:fa:ce:f2:ad:e6:fa:99:f3:92:5f:87:bb:ba:f4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ED25519&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILs98AjzXfqGGqDneopePHJoBvde46uWWPJ4r7xfVv5p
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;Ubuntu&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+| http-methods:
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-server-header: Apache/2.4.18 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ubuntu&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+|_http-title: Apache2 Ubuntu Default Page: It works
+Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/o:linux:linux_kernel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Further enumertaion reveals /secret directory&lt;/li&gt;
+  &lt;li&gt;recursive enum on the directory with ffuf with extensions txt enabled reveals :)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;# the following will give you a hint what type of hash it is&lt;/span&gt;
+hashid &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;THE HASH HERE&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;!(Cracking The Hash )[../assets/images/crackstation.png]&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Useful Tricks and Tips</title>
