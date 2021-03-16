@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-16T23:50:13+02:00</updated>
+ <updated>2021-03-17T01:17:39+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -189,6 +189,29 @@ docker run -it -d --name witcher10 -p8080:8080 -e PYTHONUNBUFFERED=1 sbacker/wit
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;Click me&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://acbe1f391e8fd65480c7a7ac017500d7.web-security-academy.net/exploit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;enumerating-samba&quot;&gt;Enumerating Samba&lt;/h1&gt;
+&lt;p&gt;-SMB has two ports, 445 and 139&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;On most distributions of Linux smbclient is already installed. Lets inspect one of the shares.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Your earlier nmap port scan will have shown port 111 running the service rpcbind. This is just a server that converts remote procedure call (RPC) program number into universal addresses. When an RPC service is started, it tells rpcbind the address at which it is listening and the RPC program number its prepared to serve.&lt;/p&gt;
+
+&lt;p&gt;In our case, port 111 is access to a network file system. Lets use nmap to enumerate this.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 111 &lt;span class=&quot;nt&quot;&gt;--script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;nfs-ls,nfs-statfs,nfs-showmount 10.10.89.231
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; /mnt/kenobiNFS
+mount machine_ip:/var /mnt/kenobiNFS
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-la&lt;/span&gt; /mnt/kenobiNFS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;On most distributions of Linux smbclient is already installed. Lets inspect one of the shares.
+
+smbclient //&amp;lt;ip&amp;gt;/anonymous
+smbget &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; smb://&amp;lt;ip&amp;gt;/anonymous
+nmap &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 445 &lt;span class=&quot;nt&quot;&gt;--script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;smb-enum-shares.nse,smb-enum-users.nse 10.10.89.231
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>

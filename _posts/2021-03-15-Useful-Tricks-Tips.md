@@ -129,3 +129,28 @@ Witcher Portal
 <iframe src="https://acbe1f391e8fd65480c7a7ac017500d7.web-security-academy.net/exploit"></iframe>
 
 ```
+# Enumerating Samba
+-SMB has two ports, 445 and 139
+- On most distributions of Linux smbclient is already installed. Lets inspect one of the shares.
+
+
+Your earlier nmap port scan will have shown port 111 running the service rpcbind. This is just a server that converts remote procedure call (RPC) program number into universal addresses. When an RPC service is started, it tells rpcbind the address at which it is listening and the RPC program number its prepared to serve.
+
+In our case, port 111 is access to a network file system. Lets use nmap to enumerate this.
+
+```bash
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.89.231
+mkdir /mnt/kenobiNFS
+mount machine_ip:/var /mnt/kenobiNFS
+ls -la /mnt/kenobiNFS
+```
+
+
+```bash
+On most distributions of Linux smbclient is already installed. Lets inspect one of the shares.
+
+smbclient //<ip>/anonymous
+smbget -R smb://<ip>/anonymous
+nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.89.231
+
+```
