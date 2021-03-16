@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-16T23:35:47+02:00</updated>
+ <updated>2021-03-16T23:43:32+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -19,7 +19,7 @@
    <id>https://beven.co.zw/2021/03/16/THM-Pentesting-Crash-Course-Challenge</id>
    <content type="html">&lt;p&gt;Room: &lt;a href=&quot;https://tryhackme.com/room/ccpentesting&quot;&gt;Pentesting Crash Course&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;enumeration&quot;&gt;Enumeration&lt;/h1&gt;
+&lt;p&gt;#Enumeration&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PORT   STATE SERVICE REASON         VERSION
 22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ubuntu Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; protocol 2.0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
