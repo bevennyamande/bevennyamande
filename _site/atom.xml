@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-16T23:16:06+02:00</updated>
+ <updated>2021-03-16T23:19:26+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -49,7 +49,7 @@ Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/
 hashid &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;THE HASH HERE&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/crackstation.png&quot; alt=&quot;Cracking The Hash&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/crackstation.png&quot; alt=&quot;Crackstation hash crack&quot; style=&quot;width:600px;height:300px&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
