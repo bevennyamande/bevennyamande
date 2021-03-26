@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-26T23:31:16+02:00</updated>
+ <updated>2021-03-26T23:33:10+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -62,7 +62,7 @@ Service Info: OSs: Unix, Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE
 
 &lt;h1 id=&quot;ftp-port-21-open&quot;&gt;FTP port 21 open&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/startup_ftp.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/startup_ftp.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;directory-enumeration&quot;&gt;Directory Enumeration&lt;/h1&gt;
 

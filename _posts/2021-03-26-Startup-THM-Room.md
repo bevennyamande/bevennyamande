@@ -50,7 +50,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 # FTP port 21 open
 
-<img src="assets/images/startup_ftp.png" />
+<img src="/assets/images/startup_ftp.png" />
 
 # Directory Enumeration
 
