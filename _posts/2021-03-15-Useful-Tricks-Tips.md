@@ -21,7 +21,7 @@ export PATH=/tmp:$PATH
 /usr/bin/menu
 ```
 
-<img src="../assets/images/kenobi.png" />
+<img src="/assets/images/kenobi.png" />
 
 # Upgrading to a shell
 
