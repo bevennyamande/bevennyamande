@@ -2,6 +2,17 @@
 layout: post
 title: Useful Tricks and Tips
 ---
+- Base32 is a common transfer encoding. It consists of 32-char set. These char-sets are usually alphabet in uppercase. 
+- Base64 is another common transfer encoding. It consists of 64-char set. These char-sets are usually alphabet in uppercase and lowercase.
+- Hex consists of 16 bits of binary. It also known as base16
+- Rot 13 or known as rotate 13 is a form of Caesar cipher which rotate in 13 times.
+- Rot 47 or known as rotate 47 is another form of Caesar cipher which rotate in 47 times. It encode almost all visible ASCII character.
+- Morse code is a combination of signal made of short and long impulsion (dot and dash). It was designed for telecommunication.
+- Binary-Coded Decimal (BCD) is a base10 encoding technique.
+
+```bash
+Cipher: 85 110 112 97 99 107 32 116 104 105 115 32 66 67 68
+```
 
 #Hashcat
 

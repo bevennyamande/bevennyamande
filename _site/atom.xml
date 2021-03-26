@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-26T21:13:53+02:00</updated>
+ <updated>2021-03-26T21:52:56+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -82,7 +82,20 @@ Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/
    <link href="https://beven.co.zw/2021/03/15/useful-tricks-tips"/>
    <updated>2021-03-15T00:00:00+02:00</updated>
    <id>https://beven.co.zw/2021/03/15/Useful-Tricks-Tips</id>
-   <content type="html">&lt;p&gt;#Hashcat&lt;/p&gt;
+   <content type="html">&lt;ul&gt;
+  &lt;li&gt;Base32 is a common transfer encoding. It consists of 32-char set. These char-sets are usually alphabet in uppercase.&lt;/li&gt;
+  &lt;li&gt;Base64 is another common transfer encoding. It consists of 64-char set. These char-sets are usually alphabet in uppercase and lowercase.&lt;/li&gt;
+  &lt;li&gt;Hex consists of 16 bits of binary. It also known as base16&lt;/li&gt;
+  &lt;li&gt;Rot 13 or known as rotate 13 is a form of Caesar cipher which rotate in 13 times.&lt;/li&gt;
+  &lt;li&gt;Rot 47 or known as rotate 47 is another form of Caesar cipher which rotate in 47 times. It encode almost all visible ASCII character.&lt;/li&gt;
+  &lt;li&gt;Morse code is a combination of signal made of short and long impulsion (dot and dash). It was designed for telecommunication.&lt;/li&gt;
+  &lt;li&gt;Binary-Coded Decimal (BCD) is a base10 encoding technique.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Cipher: 85 110 112 97 99 107 32 116 104 105 115 32 66 67 68
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;#Hashcat&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;hashcat -m 1800 -a 0 hash.txt rockyou.txt&lt;/li&gt;
