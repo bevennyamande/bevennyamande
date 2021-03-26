@@ -14,11 +14,11 @@ title: Useful Tricks and Tips
 Cipher: 85 110 112 97 99 107 32 116 104 105 115 32 66 67 68
 ```
 
-#Hashcat
+# Hashcat
 
 - hashcat -m 1800 -a 0 hash.txt rockyou.txt
 
-#Find command
+# Find command
 
 ```bash
 find / -type f -newermt 2016-09-11 ! -newermt 2016-09-13 2>/dev/null

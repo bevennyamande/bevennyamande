@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-26T21:56:24+02:00</updated>
+ <updated>2021-03-26T21:58:48+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -95,13 +95,13 @@ Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Cipher: 85 110 112 97 99 107 32 116 104 105 115 32 66 67 68
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;#Hashcat&lt;/p&gt;
+&lt;h1 id=&quot;hashcat&quot;&gt;Hashcat&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;hashcat -m 1800 -a 0 hash.txt rockyou.txt&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;#Find command&lt;/p&gt;
+&lt;h1 id=&quot;find-command&quot;&gt;Find command&lt;/h1&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find / &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; f &lt;span class=&quot;nt&quot;&gt;-newermt&lt;/span&gt; 2016-09-11 &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-newermt&lt;/span&gt; 2016-09-13 2&amp;gt;/dev/null
 
