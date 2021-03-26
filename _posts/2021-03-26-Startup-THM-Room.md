@@ -56,7 +56,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 ```bash
 
-$ ffuf -w /usr/share/wordlists/dirb/big.txt -u http://10.10.200.21/FUZZ -c
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://10.10.200.21/FUZZ -c
 
         /'___\  /'___\           /'___\
        /\ \__/ /\ \__/  __  __  /\ \__/
@@ -83,5 +83,13 @@ ________________________________________________
 files                   [Status: 301, Size: 312, Words: 20, Lines: 10]
 server-status           [Status: 403, Size: 277, Words: 20, Lines: 10]
 ```
-we can upload a shell in the ftp directory since executable permission are set...
+
+- We can upload a shell in the ftp directory since executable permission are set...
+- After upload a shell in ftp you can access it via http://IP/files/ and execute the shell
+- Boom you get shell
+
+# Check hints for user.txt 
+
+- note the /incidents directory in the / path
+- use strings and find for the password 
 
