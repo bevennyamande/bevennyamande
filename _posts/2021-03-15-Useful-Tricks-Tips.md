@@ -13,6 +13,13 @@ title: Useful Tricks and Tips
 ```bash
 Cipher: 85 110 112 97 99 107 32 116 104 105 115 32 66 67 68
 ```
+
+- With the command doas we increase our privileges to the user root.
+
+```bash
+doas -u root /bin/bash
+```
+
 # Useful resource
 
 [Reverse Engineering](http://docs.pwntools.com/en/stable/)
