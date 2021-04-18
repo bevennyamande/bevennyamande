@@ -2,6 +2,10 @@
 layout: post
 title: Useful Tricks and Tips
 ---
+
+```bash
+sed -i 's/geteuid/getppid/' /usr/bin/vlc
+```
 - Base32 is a common transfer encoding. It consists of 32-char set. These char-sets are usually alphabet in uppercase. 
 - Base64 is another common transfer encoding. It consists of 64-char set. These char-sets are usually alphabet in uppercase and lowercase.
 - Hex consists of 16 bits of binary. It also known as base16

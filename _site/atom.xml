@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-04-05T18:29:20+02:00</updated>
+ <updated>2021-04-18T14:13:56+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -181,7 +181,9 @@ Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/
    <link href="https://beven.co.zw/2021/03/15/useful-tricks-tips"/>
    <updated>2021-03-15T00:00:00+02:00</updated>
    <id>https://beven.co.zw/2021/03/15/Useful-Tricks-Tips</id>
-   <content type="html">&lt;ul&gt;
+   <content type="html">&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/geteuid/getppid/'&lt;/span&gt; /usr/bin/vlc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
   &lt;li&gt;Base32 is a common transfer encoding. It consists of 32-char set. These char-sets are usually alphabet in uppercase.&lt;/li&gt;
   &lt;li&gt;Base64 is another common transfer encoding. It consists of 64-char set. These char-sets are usually alphabet in uppercase and lowercase.&lt;/li&gt;
   &lt;li&gt;Hex consists of 16 bits of binary. It also known as base16&lt;/li&gt;
