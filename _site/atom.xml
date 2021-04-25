@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-04-25T22:47:50+02:00</updated>
+ <updated>2021-04-25T22:52:25+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>DNS Manipulation - TryHackMe Room</title>
+   <title>Year of the Jellyfish - TryHackMe Room</title>
    <link href="https://beven.co.zw/2021/04/21/year-of-jellyfish"/>
    <updated>2021-04-21T00:00:00+02:00</updated>
    <id>https://beven.co.zw/2021/04/21/Year-of-Jellyfish</id>
@@ -102,15 +102,15 @@ SF:015&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r\n\r\n&lt;/span&gt;&lt;spa
 
 &lt;h2 id=&quot;ffuf&quot;&gt;FFUF&lt;/h2&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffuf &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/wordlists/dirb/common.txt &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; https://robyns-petshop.thm/FUZZ &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;ffuf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wordlists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;common&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;robyns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;petshop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;thm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FUZZ&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;
 
-        /&lt;span class=&quot;s1&quot;&gt;'___\  /'&lt;/span&gt;___&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;          /&lt;span class=&quot;s1&quot;&gt;'___\
-       /\ \__/ /\ \__/  __  __  /\ \__/
-       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\
-        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/
-         \ \_\   \ \_\  \ \____/  \ \_\
-          \/_/    \/_/   \/___/    \/_/
+        &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'___&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; /'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;___&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'___&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;
+       /&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \_&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;_/ /&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \_&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;_/  __  __  /&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \_&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;_/
+       &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;,__&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;,__&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/\ \/\ \ \ \ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;,__&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \ \_&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/ &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \ \_&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \ \_\ \ \ \ \_&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/
+         &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \_\ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \_\ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \_&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;___/  &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ \_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;_/    &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;_/   &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;___/    &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;_/
 
        v1.3.0 Kali Exclusive &amp;lt;3
 ________________________________________________
@@ -141,9 +141,9 @@ themes                  [Status: 301, Size: 327, Words: 20, Lines: 10]
 vendor                  [Status: 301, Size: 327, Words: 20, Lines: 10]
 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;config&quot;&gt;/config&lt;/h3&gt;
+&lt;h3 id=&quot;config&quot;&gt;Config&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/images/jellyfish-petshop-config.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/jellyfish-petshop-config.png&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  

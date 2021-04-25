@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DNS Manipulation - TryHackMe Room
+title: Year of the Jellyfish - TryHackMe Room
 ---
 
 Room: [Year of the Jellyfish](https://tryhackme.com/room/yearofthejellyfish)
@@ -90,9 +90,9 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 ## FFUF
 
-```bash
+```sql
 
-$ ffuf -w /usr/share/wordlists/dirb/common.txt -u https://robyns-petshop.thm/FUZZ -c
+ffuf -w /usr/share/wordlists/dirb/common.txt -u https://robyns-petshop.thm/FUZZ -c
 
         /'___\  /'___\           /'___\
        /\ \__/ /\ \__/  __  __  /\ \__/
@@ -130,6 +130,6 @@ themes                  [Status: 301, Size: 327, Words: 20, Lines: 10]
 vendor                  [Status: 301, Size: 327, Words: 20, Lines: 10]
 
 ```
-### /config
+### Config
 
-<img src="./assets/images/jellyfish-petshop-config.png" >
+<img src="../assets/images/jellyfish-petshop-config.png" >
