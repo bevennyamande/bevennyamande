@@ -212,3 +212,10 @@ smbget -R smb://<ip>/anonymous
 nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.89.231
 
 ```
+# Tshark
+
+```bash
+
+tshark -r dns.cap -Y "dns.qry.type == 1" -T fields -e dns.qry.name
+
+```
