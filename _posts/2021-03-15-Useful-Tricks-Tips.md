@@ -231,3 +231,11 @@ To complete this task:
     Run a port scan to enumerate internal ports on the server using proxychains. If you use Nmap your command should look like this proxychains nmap -sT 127.0.0.1 .
     After finding the port of the webserver, perform Local Port Forwarding to that port using SSH with the -L flag.
     HINT: -i id_rsa -L 80:127.0.0.1:(remote port) (Try using with sudo)
+How to Mount it:
+
+    showmount -e 10.10.174.95
+    mkdir /tmp/NFS
+    mount -t nfs 10.10.174.95:/opt/conf /tmp/NFS
+    df -k
+
+Now we can easily access the mount folder now.

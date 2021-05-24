@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-05-24T23:16:39+02:00</updated>
+ <updated>2021-05-24T23:31:25+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -532,8 +532,15 @@ The file name may vary depending on the distro you are using.
 
 Run a port scan to enumerate internal ports on the server using proxychains. If you use Nmap your command should look like this proxychains nmap -sT 127.0.0.1 .
 After finding the port of the webserver, perform Local Port Forwarding to that port using SSH with the -L flag.
-HINT: -i id_rsa -L 80:127.0.0.1:(remote port) (Try using with sudo)
+HINT: -i id_rsa -L 80:127.0.0.1:(remote port) (Try using with sudo) How to Mount it:
+
+showmount -e 10.10.174.95
+mkdir /tmp/NFS
+mount -t nfs 10.10.174.95:/opt/conf /tmp/NFS
+df -k
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we can easily access the mount folder now.&lt;/p&gt;
 </content>
  </entry>
  
