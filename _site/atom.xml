@@ -4,7 +4,7 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-05-25T15:26:16+02:00</updated>
+ <updated>2021-05-27T11:49:36+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
@@ -17,7 +17,7 @@
    <link href="https://beven.co.zw/2021/05/25/red-stone-one-caratthm"/>
    <updated>2021-05-25T00:00:00+02:00</updated>
    <id>https://beven.co.zw/2021/05/25/Red-Stone-One-CaratTHM</id>
-   <content type="html">&lt;p&gt;Room: &lt;a href=&quot;https://tryhackme.com/room/startup&quot;&gt;Startup&lt;/a&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;Room: [Red Stone One Carat]&lt;/p&gt;
 
 &lt;h1 id=&quot;enumeration-&quot;&gt;Enumeration &lt;nmap&gt;&lt;/nmap&gt;&lt;/h1&gt;
 &lt;ul&gt;

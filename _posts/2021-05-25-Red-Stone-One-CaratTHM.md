@@ -3,7 +3,7 @@ layout: post
 title: Red Stone One Carat - TryHackMe Room
 ---
 
-Room: [Startup](https://tryhackme.com/room/startup)
+Room: [Red Stone One Carat]
 
 # Enumeration <nmap>
 - Start by enumerating the box
