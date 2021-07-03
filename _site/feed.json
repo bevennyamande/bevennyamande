@@ -17,6 +17,30 @@
 "items": [
     
         {
+            "id": "https://beven.co.zw/2021/06/03/setting-flask-apache2",
+            "title": "Setting Flask App to run on Apache2",
+            "summary": null,
+            "content_text": "Installing the required librariesapt install libapache2-mod-wsgi-py3a2enmod wsgi# change directory to the folder hosting the applicationcd /var/wwwvim /etc/apache2/sites-available/THE_FLASK_APP.conf&lt;VirtualHost *:80&gt;\t\tServerName mywebsite.com\t\tServerAdmin admin@mywebsite.com\t\tWSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi\t\t&lt;Directory /var/www/FlaskApp/FlaskApp/&gt;\t\t\tOrder allow,deny\t\t\tAllow from all\t\t&lt;/Directory&gt;\t\tAlias /static /var/www/FlaskApp/FlaskApp/static\t\t&lt;Directory /var/www/FlaskApp/FlaskApp/static/&gt;\t\t\tOrder allow,deny\t\t\tAllow from all\t\t&lt;/Directory&gt;\t\tErrorLog ${APACHE_LOG_DIR}/error.log\t\tLogLevel warn\t\tCustomLog ${APACHE_LOG_DIR}/access.log combined&lt;/VirtualHost&gt;a2ensite bountyapp",
+            "content_html": "<h1 id=\"installing-the-required-libraries\">Installing the required libraries</h1><div class=\"language-bash highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code>apt <span class=\"nb\">install </span>libapache2-mod-wsgi-py3a2enmod wsgi<span class=\"c\"># change directory to the folder hosting the application</span><span class=\"nb\">cd</span> /var/wwwvim /etc/apache2/sites-available/THE_FLASK_APP.conf</code></pre></div></div><p>&lt;VirtualHost *:80&gt;\t\tServerName mywebsite.com\t\tServerAdmin admin@mywebsite.com\t\tWSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi\t\t&lt;Directory /var/www/FlaskApp/FlaskApp/&gt;\t\t\tOrder allow,deny\t\t\tAllow from all\t\t&lt;/Directory&gt;\t\tAlias /static /var/www/FlaskApp/FlaskApp/static\t\t&lt;Directory /var/www/FlaskApp/FlaskApp/static/&gt;\t\t\tOrder allow,deny\t\t\tAllow from all\t\t&lt;/Directory&gt;\t\tErrorLog ${APACHE_LOG_DIR}/error.log\t\tLogLevel warn\t\tCustomLog ${APACHE_LOG_DIR}/access.log combined&lt;/VirtualHost&gt;</p><div class=\"language-bash highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code>a2ensite bountyapp</code></pre></div></div>",
+            "url": "https://beven.co.zw/2021/06/03/setting-flask-apache2",
+            
+            
+            
+            
+            
+            "date_published": "2021-06-03T00:00:00+02:00",
+            "date_modified": "2021-06-03T00:00:00+02:00",
+            
+                "author":  {
+                "name": "Beven Nyamande",
+                "url": "https://beven.co.zw",
+                "avatar": null
+                }
+                
+            
+        },
+    
+        {
             "id": "https://beven.co.zw/2021/05/25/red-stone-one-caratthm",
             "title": "Red Stone One Carat - TryHackMe Room",
             "summary": null,

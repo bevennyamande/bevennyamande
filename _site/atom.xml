@@ -4,13 +4,56 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-07-03T12:23:42+02:00</updated>
+ <updated>2021-07-03T22:27:00+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
    <email>wasp00007@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Setting Flask App to run on Apache2</title>
+   <link href="https://beven.co.zw/2021/06/03/setting-flask-apache2"/>
+   <updated>2021-06-03T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/06/03/Setting-Flask-Apache2</id>
+   <content type="html">&lt;h1 id=&quot;installing-the-required-libraries&quot;&gt;Installing the required libraries&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libapache2-mod-wsgi-py3
+a2enmod wsgi
+
+&lt;span class=&quot;c&quot;&gt;# change directory to the folder hosting the application&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /var/www
+vim /etc/apache2/sites-available/THE_FLASK_APP.conf
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;lt;VirtualHost *:80&amp;gt;
+		ServerName mywebsite.com
+		ServerAdmin admin@mywebsite.com
+		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
+		&amp;lt;Directory /var/www/FlaskApp/FlaskApp/&amp;gt;
+			Order allow,deny
+			Allow from all
+		&amp;lt;/Directory&amp;gt;
+		Alias /static /var/www/FlaskApp/FlaskApp/static
+		&amp;lt;Directory /var/www/FlaskApp/FlaskApp/static/&amp;gt;
+			Order allow,deny
+			Allow from all
+		&amp;lt;/Directory&amp;gt;
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+&amp;lt;/VirtualHost&amp;gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a2ensite bountyapp
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Red Stone One Carat - TryHackMe Room</title>
