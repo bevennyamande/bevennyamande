@@ -17,26 +17,34 @@ vim /etc/apache2/sites-available/THE_FLASK_APP.conf
 
 
 ```
-
 <VirtualHost *:80>
-		ServerName mywebsite.com
-		ServerAdmin admin@mywebsite.com
-		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
-		<Directory /var/www/FlaskApp/FlaskApp/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		Alias /static /var/www/FlaskApp/FlaskApp/static
-		<Directory /var/www/FlaskApp/FlaskApp/static/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		ErrorLog ${APACHE_LOG_DIR}/error.log
-		LogLevel warn
-		CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+         ServerName x.x.x.x
+         # DocumentRoot /var/www/mysite
+
+         # ServerAdmin admin@mywebsite.com
+         WSGIScriptAlias / /var/www/mysite/mysite.wsgi
+         WSGIDaemonProcess mysite user=www-data group=www-data threads=6 display-name=%{GROUP} processes=5
+         WSGIScriptReloading On
+         WSGIProcessGroup mysite
+         WSGIApplicationGroup %{GLOBAL}
+         ErrorLog ${APACHE_LOG_DIR}/error-mysite.log
+         LogLevel debug
+         CustomLog ${APACHE_LOG_DIR}/access-mysite.log combined
+         Timeout 600
+
+         <Directory /var/www/mysite/mysite/>
+         <IfVersion >= 2.4>
+             Require all granted
+         </IfVersion>
+         <IfVersion < 2.4>
+             Order allow,deny
+             Allow from all
+         </IfVersion>
+         </Directory>
+
+ </VirtualHost>
 
 ```bash
-a2ensite bountyapp
-
+a2ensite mysite
+chown -R www-data: /var/www/mysite/staticfiles
 ```
