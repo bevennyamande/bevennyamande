@@ -4,13 +4,36 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-07-03T23:28:42+02:00</updated>
+ <updated>2021-07-14T11:32:09+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
    <email>wasp00007@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Setting Tor website</title>
+   <link href="https://beven.co.zw/2021/06/14/setting-tor-site"/>
+   <updated>2021-06-14T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/06/14/Setting-Tor-Site</id>
+   <content type="html">&lt;h1 id=&quot;setting-the-required-file&quot;&gt;Setting the required file&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+vim  /etc/tor/torrc
+HiddenServiceDir /var/lib/tor/hidden_service/                                                                                                                        
+HiddenServicePort 80 127.0.0.1:80
+
+service tor restart
+
+&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /var/lib/tor/hidden_service/hostname
+
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Setting Flask App to run on Apache2</title>

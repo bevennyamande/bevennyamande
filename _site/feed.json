@@ -17,6 +17,30 @@
 "items": [
     
         {
+            "id": "https://beven.co.zw/2021/06/14/setting-tor-site",
+            "title": "Setting Tor website",
+            "summary": null,
+            "content_text": "Setting the required filevim  /etc/tor/torrcHiddenServiceDir /var/lib/tor/hidden_service/                                                                                                                        HiddenServicePort 80 127.0.0.1:80service tor restartcat /var/lib/tor/hidden_service/hostname",
+            "content_html": "<h1 id=\"setting-the-required-file\">Setting the required file</h1><div class=\"language-bash highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code>vim  /etc/tor/torrcHiddenServiceDir /var/lib/tor/hidden_service/                                                                                                                        HiddenServicePort 80 127.0.0.1:80service tor restart<span class=\"nb\">cat</span> /var/lib/tor/hidden_service/hostname</code></pre></div></div>",
+            "url": "https://beven.co.zw/2021/06/14/setting-tor-site",
+            
+            
+            
+            
+            
+            "date_published": "2021-06-14T00:00:00+02:00",
+            "date_modified": "2021-06-14T00:00:00+02:00",
+            
+                "author":  {
+                "name": "Beven Nyamande",
+                "url": "https://beven.co.zw",
+                "avatar": null
+                }
+                
+            
+        },
+    
+        {
             "id": "https://beven.co.zw/2021/06/03/setting-flask-apache2",
             "title": "Setting Flask App to run on Apache2",
             "summary": null,
