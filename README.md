@@ -1,7 +1,6 @@
 ### $ whoami
 
 - Security Enthusiast, CTFer @ [Tryhackme](https://tryhackme.com/p/werkzeug)
-- Bcom in Finance :)
 - Deep love for Python and Flask
 
 #### ⚡ funfact ...
@@ -11,7 +10,6 @@
 #### Roadmap to Self-Mastery and Skills Upgrade
 
 - Learn Reverse Engineering fro CTFs etc ( Radare2 Mastery )
-- Learn css and js ( Frontend Mastery )
 - Learn PHP ( Backend Mastery ) for i know python, :)
 - Learn game development in python ( ursina )
 
