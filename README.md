@@ -1,7 +1,7 @@
 ### $ whoami
 
 - Offensive Security Researcher, CTFer @ [Tryhackme](https://tryhackme.com/p/werkzeug)
-- Bug Bounty hunter @ [hackerone.com] (hackerone.com/0xbeven)
+- Bug Bounty hunter @ [hackerone.com] (https://hackerone.com/0xbeven)
 - Night time Data Science Enthusiast @ [kaggle.com](https://www.kaggle.com/bevennyamande)
 - Deep love for all things Python
 
