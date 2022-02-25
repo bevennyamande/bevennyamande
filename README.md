@@ -1,13 +1,15 @@
 ### $ whoami
 
-- Security Researcher, CTFer @ [Tryhackme](https://tryhackme.com/p/werkzeug)
-- Deep love for Python and Flask
+- Offensive Security Researcher, CTFer @ [Tryhackme](https://tryhackme.com/p/werkzeug)
+- Bug Bounty hunter @ [hackerone.com] (hackerone.com/0xbeven)
+- Night time Data Science Enthusiast @ [kaggle.com](https://www.kaggle.com/bevennyamande)
+- Deep love for all things Python
 
 #### ⚡ funfact ...
 
-- Mostly self taught ( "Stay Hungry and Curious" )
+- Most of the stuff i do , i learn by myself ...
 
-#### Roadmap to Self-Mastery and Skills Upgrade
+#### Upgrading
 
 - Learn Reverse Engineering fro CTFs etc ( Radare2 Mastery )
 

