@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Year of the Jellyfish - TryHackMe Room
+title:Tryhackme Room - Year of the Jellyfish
 ---
 
 Room: [Year of the Jellyfish](https://tryhackme.com/room/yearofthejellyfish)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: THM Room - Gallery 
+title: Tryhackme Room - Gallery 
 ---
 
 ROOM: [Gallery](https://tryhackme.com/room/gallery666)

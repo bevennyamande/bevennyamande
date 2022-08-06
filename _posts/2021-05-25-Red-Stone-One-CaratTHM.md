@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Red Stone One Carat - TryHackMe Room
+title: Tryhackme Room - Red Stone One Carat
 ---
 
 Room: [Red Stone One Carat]

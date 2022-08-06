@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Useful Tricks and Tips
+title: Tricks and Tips
 ---
 
 ```bash

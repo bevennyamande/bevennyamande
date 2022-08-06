@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Tor website 
+title: Tips & Tricks How to setup a  Tor website 
 ---
 
 # Setting the required file

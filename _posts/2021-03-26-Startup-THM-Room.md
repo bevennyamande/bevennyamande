@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Startup - TryHackMe Room
+title: Tryhackme Room - Startup
 ---
 
 Room: [Startup](https://tryhackme.com/room/startup)

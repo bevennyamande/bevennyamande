@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Flask App to run on Apache2 
+title: Tips & Tricks How to setup a  Flask App to run on Apache2 
 ---
 
 # Installing the required libraries

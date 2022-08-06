@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DNS Manipulation - TryHackMe Room
+title: Tryhackme Room - DNS Manipulation
 ---
 
 Room: [DNS Manipulation](https://tryhackme.com/room/dnsmanipulation)
