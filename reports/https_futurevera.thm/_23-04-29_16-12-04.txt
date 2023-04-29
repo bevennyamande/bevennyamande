@@ -1,0 +1,26 @@
+# Dirsearch started Sat Apr 29 16:16:10 2023 as: /usr/local/bin/dirsearch -u https://futurevera.thm
+
+301   315B   https://futurevera.thm/js    -> REDIRECTS TO: https://futurevera.thm/js/
+403   280B   https://futurevera.thm/.ht_wsr.txt
+403   280B   https://futurevera.thm/.htaccess.bak1
+403   280B   https://futurevera.thm/.htaccess.orig
+403   280B   https://futurevera.thm/.htaccess.save
+403   280B   https://futurevera.thm/.htaccess.sample
+403   280B   https://futurevera.thm/.htaccess_extra
+403   280B   https://futurevera.thm/.htaccess_sc
+403   280B   https://futurevera.thm/.htaccess_orig
+403   280B   https://futurevera.thm/.htaccessBAK
+403   280B   https://futurevera.thm/.htaccessOLD
+403   280B   https://futurevera.thm/.htaccessOLD2
+403   280B   https://futurevera.thm/.html
+403   280B   https://futurevera.thm/.htm
+403   280B   https://futurevera.thm/.htpasswd_test
+403   280B   https://futurevera.thm/.httr-oauth
+403   280B   https://futurevera.thm/.htpasswds
+403   280B   https://futurevera.thm/.php
+200   491B   https://futurevera.thm/assets/
+301   319B   https://futurevera.thm/assets    -> REDIRECTS TO: https://futurevera.thm/assets/
+301   316B   https://futurevera.thm/css    -> REDIRECTS TO: https://futurevera.thm/css/
+200   495B   https://futurevera.thm/js/
+403   280B   https://futurevera.thm/server-status
+403   280B   https://futurevera.thm/server-status/
