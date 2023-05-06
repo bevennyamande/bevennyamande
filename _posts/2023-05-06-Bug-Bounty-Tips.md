@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tryhackme Room - Olympus
+title: Bug Bounty Tips
 ---
 
 Bug Bounty Tips
