@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XHR CORS Test</title>
+</head>
+<body>
+    <h3>Testing CORS with XHR</h3>
+    <script>
+        const url = "https://community.oppo.com/ajax/msg/frontend/system/index/list?page=1&limit=10";
+
+        // Test with XHR
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.withCredentials = true;
+
+        // Set the custom header
+        xhr.setRequestHeader("appCode", "community");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log("Response:", xhr.responseText);
+                    alert("Data fetched: " + xhr.responseText);
+                } else {
+                    console.error("Request failed with status:", xhr.status);
+                }
+            }
+        };
+
+        xhr.send();
+    </script>
+</body>
+</html>
+
+
