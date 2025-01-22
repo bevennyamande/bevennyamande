@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Test</title>
+</head>
+<body>
+    <h3>Testing Form Submission with iframe</h3>
+    <form id="dataForm" action="https://community.oppo.com/ajax/msg/frontend/system/index/list" method="GET" target="resultIframe">
+        <input type=hidden name="page" value="1">
+        <input type=hidden name="limit" value="10">
+    </form>
+    <iframe id="resultIframe" name="resultIframe" style="width: 100%; height: 500px; border: none;"></iframe>
+    <script>
+        // Automatically submit the form
+        document.getElementById("dataForm").submit();
+    </script>
+</body>
+</html>
+
+
