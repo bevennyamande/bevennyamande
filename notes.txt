@@ -1,0 +1,46 @@
+jane@untitled.tld
+
+scr1ptkiddy
+
+Tyler Ramsbey.
+
+scr1ptkiddy
+API Token :	19c7ccbf1d6e4734b8ec1d8bbc9df892
+
+ http://10.10.170.169:8080/website/FUZZ
+ http://10.10.170.169:8080/console --> redirects 
+ http://10.10.170.169:8080/weblib/
+
+
+ User-agent: *
+Disallow: /silverpeas/
+Allow: /silverpeas/defaultLogin.jsp
+
+
+silveradmin@localhost
+
+
+
+
+
+                            <p>Username: tim</p>
+                            <p>Password:&nbsp;cm0nt!md0ntf0rg3tth!spa$$w0rdagainlol</p>
+              
+usr/bin/docker run --name silverpeas -p 8080:8000 -d -e DB_NAME=Silverpeas -e DB_USER=silverpeas -e DB_PASSWORD=_Zd_zx7N823/ -v silverpeas-log:/opt/silverpeas/log -v silverpeas-data:/opt/silvepeas/data --link postgresql:database silverpeas:6.3.1
+
+
+              
+
+API Token:	c7becf5bfae449d5b6623599545a6b37
+
+Tyler just asked if I wanted to play VR but he left you out scr1ptkiddy (what a jerk). Want to join us? We will probably hop on in like an hour or so. 
+
+
+
+skins                   [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 248ms]
+.                       [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 249ms]
+robots.txt              [Status: 200, Size: 72, Words: 4, Lines: 3, Duration: 275ms]
+ckeditor                [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 302ms]
+exchange                [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 294ms]
+applets                 [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 303ms]
+notFound.html 
